@@ -1,0 +1,38 @@
+{
+    "name": "innova/metronome-bundle",
+    "description" : "Claroline metronome Bundle",
+    "keywords": ["Claroline", "Plugin"],
+    "homepage": "http://www.claroline.net",
+    "type": "claroline-plugin",
+    "authors": [{
+            "name": "Arnaud Bey",
+            "email": "arnaud.bey@u-grenoble3.fr"
+        }, {
+            "name": "Axel Penin",
+            "email": "axel.penin@u-grenoble3.fr"
+        }, {
+            "name": "Eric Vincent",
+            "email": "eric.vincent@u-grenoble3.fr"
+        }, {
+            "name": "Donovan Tengblad",
+            "email": "donovan.tengblad@u-grenoble3.fr"
+        }, {
+            "name": "Patrick Guillou",
+            "email": "patrick.guillou@u-grenoble3.fr"
+        }, {
+            "name": "Nicolas Dufour",
+            "email": "nicolas.dufour@u-grenoble3.fr"
+        }
+    ],
+    "license": "GPL-3.0+",
+    "require": {
+        "php": ">=5.4.1",
+        "claroline/core-bundle": "~6.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Innova\\Metronome": ""
+        }
+    },
+    "target-dir": "Innova/MetronomeBundle"
+}
