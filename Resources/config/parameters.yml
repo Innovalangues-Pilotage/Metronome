@@ -1,0 +1,8 @@
+parameters:       
+    # Listeners
+    innova_metronome.listener.metronome.class:    Innova\MetronomeBundle\EventListener\Resource\MetronomeListener
+    
+    # Form Types
+    innova_metronome.form.type.metronome.class:   Innova\MetronomeBundle\Form\Type\MetronomeType
+    
+    

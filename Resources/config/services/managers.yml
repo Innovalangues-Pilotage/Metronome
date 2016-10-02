@@ -1,0 +1,7 @@
+services:
+    innova_metronome.manager.metronome:
+        class: Innova\MetronomeBundle\Manager\MetronomeManager 
+        arguments:
+            entityManager:  @doctrine.orm.entity_manager
+            translator:     @translator
+            

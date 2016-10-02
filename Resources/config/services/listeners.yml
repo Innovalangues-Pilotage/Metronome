@@ -1,0 +1,12 @@
+services:
+    innova.listener.metronome:
+        class: %innova_metronome.listener.metronome.class%
+        calls:
+            - [setContainer, ["@service_container"]]
+        tags:
+            - { name: kernel.event_listener, event: innova_metronome_administrate_innova_metronome, method: onAdministrate }
+            - { name: kernel.event_listener, event: create_innova_metronome, method: onCreate }
+            - { name: kernel.event_listener, event: create_form_innova_metronome, method: onCreateForm }
+            - { name: kernel.event_listener, event: open_innova_metronome, method: onOpen }
+            - { name: kernel.event_listener, event: delete_innova_metronome, method: onDelete }
+            - { name: kernel.event_listener, event: copy_innova_metronome, method: onCopy }

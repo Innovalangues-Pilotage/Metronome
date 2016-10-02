@@ -1,0 +1,4 @@
+metronome_controller:
+    resource: "@InnovaMetronomeBundle/Controller/MetronomeController.php"
+    type: annotation
+    prefix: /

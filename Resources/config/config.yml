@@ -1,0 +1,12 @@
+plugin:
+  has_options: false
+  icon: res_file.png    
+
+  resources:
+    - class: Innova\MetronomeBundle\Entity\Metronome
+      name: innova_metronome
+      is_exportable: true
+      icon: res_file.png
+      actions:
+        - name: administrate
+          menu_name: innova_metronome_administrate

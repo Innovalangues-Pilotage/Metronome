@@ -1,0 +1,107 @@
+{% extends  "InnovaMetronomeBundle::layout.html.twig" %}
+{% block breadcrumb %}
+    {{ parent() }}
+{% endblock %}
+
+{% block metronome_content %}
+    <!-- PANEL HEADER -->
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-12 ">
+                <h3 class="panel-title"> {{_resource.resourceNode.name}} </h3>
+            </div>
+        </div>
+    </div>
+    <!-- PANEL BODY -->
+    <div class="panel-body"> 
+        <div class="metronome-container">
+            <!-- light -->
+            <div class="row">
+                <div id="beatIndicatorContainer" class="col-md-12 center-text">
+                    <div id="beatIndicator"></div>
+                </div>
+            </div>
+            <!-- play -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="my-btn-container">
+                        <button id="play" class="btn btn-default btn-play" title="{{'start_stop' | trans({}, 'metronome')}} ">
+                            <i class="fa fa-play"></i> / <i class="fa fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- tempo -->
+            <hr/>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="input-group tempo-imputs">
+                        <input type="text"  class="form-control" name="bpm" id="bpm" />
+                        <span class="input-group-btn">
+                            <button id="bpmPlus" type="button" class="btn btn-default" title="{{'increase_tempo' | trans({}, 'metronome')}}">+</button>
+                            <button id="bpmMinus" type="button"  class="btn btn-default" title="{{'decrease_tempo' | trans({}, 'metronome')}}">-</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- mode choice -->
+            <hr/>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="btn-group" data-toggle="buttons">
+
+                        <label class="btn btn-default btn-sample active">
+                            <input type="radio" name="options" value="beep-blink" checked="checked" />
+                            {{'sound_and_light' | trans({}, 'metronome')}} 
+                        </label>
+                        <label class="btn btn-default btn-sample">
+                            <input type="radio" name="options" value="beep" />
+                            {{'sound' | trans({}, 'metronome')}} 
+                        </label>
+                        <label class="btn btn-default btn-sample">
+                            <input type="radio" name="options" value="blink" />
+                            {{'light' | trans({}, 'metronome')}} 
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <!-- sound choice -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            {{'sound_choice' | trans({}, 'metronome')}} <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a data-id="beep-7" href="#">Beep</a>
+                            </li>
+                            <li>
+                                <a data-id="el-kick" href="#">Elec kick</a>
+                            </li>
+                            <li>
+                                <a data-id="el-sn" href="#">Elec snare</a>
+                            </li>
+                            <li>
+                                <a data-id="el-hh" href="#">Elec charley</a>
+                            </li>
+                            <li>
+                                <a data-id="woodblock" href="#">Woodblock</a>
+                            </li>
+                            <li>
+                                <a data-id="seiko-high" href="#">Seiko</a>
+                            </li>
+                            <li>
+                                <a data-id="stick" href="#">Drumstick</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="selected-title">Woodblock</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="assets" value="{{asset('')}}"/>
+
+{% endblock %}

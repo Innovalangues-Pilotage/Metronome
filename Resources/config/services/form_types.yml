@@ -1,0 +1,6 @@
+services:    
+    # Metronome type
+    innova_metronome.form.type.metronome:
+        class:  %innova_metronome.form.type.metronome.class%
+        tags:
+          - { name: form.type, alias: metronome }
